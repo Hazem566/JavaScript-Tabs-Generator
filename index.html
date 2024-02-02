@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Hazem Mahmoud" />
+    <meta http-equiv="X-UA-Combatible" content="IE-edge" />
+    <title>Cities Generator</title>
+    <!-- css Links -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1 class="title">Cities Info</h1>
+            <p class="subtitle">Generate Text and Images</p>
+        </div>
+        <div class="content">
+            <div class="tabs">
+                <div class="btns">
+                    <button type="button" class="btn active" data-city="tokyo">Tokyo</button>
+                    <button type="button" class="btn" data-city="newYork">New York</button>
+                    <button type="button" class="btn" data-city="london">London</button>
+                </div>
+                <div class="text__container">
+                    <p class="text">
+                    </p>
+                </div>
+            </div>
+            <div class="img__container">
+                <div class="icon" id="last">
+                    <img src="./assets/arrow.png" alt="Arrow"/>
+                </div>
+                <img src="" class="img" alt="City Picture" />
+                <div class="icon" id="next">
+                    <img src="./assets/arrow.png" alt="Arrow"/>
+                </div>
+            </div>   
+        </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

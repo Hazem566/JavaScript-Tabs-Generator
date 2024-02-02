@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+    --main-color: #eeeeee;
+    --black: #000;
+    --black-alt: #333;
+    --light-gray: #c7c7c7;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: bottom;
+}
+body {
+    background-color: var(--main-color);
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    max-height: 100vh;
+    padding: 0 1rem;
+    width: 418px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    padding: 2rem 0;
+}
+.content {margin-top: 4rem;}
+.tabs {
+    max-width: 600px;
+    height: 350px;
+}
+.btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1.5rem;
+}
+.btn {
+    padding: 0.7rem;
+    font-size: 1.1em;
+    border: none;
+    background-color: var(--light-gray);
+    transition: background 300ms ease;
+    color: var(--black-alt);
+}
+.btn:hover {
+    background-color: var(--main-color);
+    border: solid 0.1rem var(--light-gray);
+    padding: 0.6rem;
+}
+.active {
+    background-color: var(--main-color);
+    border: solid 0.1rem var(--light-gray);
+    padding: 0.6rem;
+}
+.text__container { padding: 0.5rem; }
+.img__container {position: relative;}
+.text {color: rgba(0, 0, 0, 0.55);}
+.icon {
+    height: 3rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+.icon img {
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+.icon:first-child {
+    top: 50%;
+    transform: translateY(-24px) rotate(90deg);
+    left: 3px;
+}
+.icon:last-child {
+    bottom: 50%;
+    right: 3px;
+    transform: translateY(25px) rotate(-90deg);
+}
+
+@media only screen and (max-height: 820px) {
+    .content {margin: 0;}
+}
+@media only screen and (min-width: 768px ) {
+    main {width: 700px;}
+    .header .title{font-size: 3rem;}
+    .header .subtitle {font-size: 1.2rem;}
+    img {max-height: 360px;}
+    .tabs {height: 280px;}
+    .text {font-size: 1.15rem;}
+    .btn {font-size: 1.25rem;}
+}
+@media only screen and (min-width: 1300px) {
+    main{ width: 1250px; }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10rem;
+    }
+}
+@media only screen and (max-width: 427px) {
+    main {width: 95%;}
+    .header {padding: 1rem 0;}
+    .btns {margin-bottom: 0.5rem;}
+    .btn {padding: 0.4rem;}
+    .btn:hover {padding: 0.3rem;}
+    .active {padding: 0.3rem;}
+    img {height: 200px}
+    .text {font-size: 0.9rem;}
+    .tabs {height: 320px;}
+    .icon {height: 2.3rem}
+    .icon:last-child {transform: translateY(12px) rotate(-90deg)}
+}
+
+

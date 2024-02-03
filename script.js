@@ -47,14 +47,15 @@ window.addEventListener("load", () => {
         if (tabs[x].name === btnCity) {
           let city = tabs[i];
           text.innerHTML = city.text[counter];
-          img.src = `./assets/${city.name}/${city.images[counter]}.jpg`;
+          img.src = `./assets/${city.images[counter]}.jpg`;
+          console.log(`./assets/${city.images[counter]}.jpg`);
           next.addEventListener("click", () => {
             counter++;
             if (counter === 4) {
               counter = 0;
             }
             text.innerHTML = city.text[counter];
-            img.src = `./assets/${city.name}/${city.images[counter]}.jpg`;
+            img.src = `./assets/${city.images[counter]}.jpg`;
           });
           last.addEventListener("click", () => {
             counter--;
@@ -62,7 +63,7 @@ window.addEventListener("load", () => {
               counter = 3;
             }
             text.innerHTML = city.text[counter];
-            img.src = `./assets/${city.name}/${city.images[counter]}.jpg`;
+            img.src = `./assets/${city.images[counter]}.jpg`;
           });
         }
       }
@@ -80,14 +81,14 @@ btns.forEach((btn) => {
       if (tabs[x].name === city) {
         let cityClicked = tabs[x];
         text.innerHTML = cityClicked.text[counter];
-        img.src = `./assets/${cityClicked.name}/${cityClicked.images[counter]}.jpg`;
+        img.src = `./assets/${cityClicked.images[counter]}.jpg`;
         next.addEventListener("click", () => {
           counter++;
           if (counter === 4) {
             counter = 0;
           }
           text.innerHTML = cityClicked.text[counter];
-          img.src = `./assets/${cityClicked.name}/${cityClicked.images[counter]}.jpg`;
+          img.src = `./assets/${cityClicked.images[counter]}.jpg`;
         });
       }
     }
